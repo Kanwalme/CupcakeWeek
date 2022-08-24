@@ -35,6 +35,37 @@ public class Main {
         cupcakeMenu.add(redVelvet);
         cupcakeMenu.add(chocolate);
 
+        ArrayList<Drink> drinkMenu = new ArrayList<Drink>();
+        Drink water = new Drink();
+        Soda soda = new Soda();
+        Milk milk = new Milk();
+
+        System.out.println("We are in the middle of creating the drink menu. We currently have three drinks on the menu but we need to decide on pricing.");
+        input = new Scanner(System.in);
+        System.out.println("We are deciding on the price for water. Here is the description:");
+        water.type();
+        System.out.println("How much would you like to charge for water? (Input a numerical number taken to 2 decimal places)");
+        priceText = input.nextLine();
+        price = Double.parseDouble(priceText);
+        water.setPrice(price);
+
+        System.out.println("We are deciding on the price for soda. Here is the description:");
+        soda.type();
+        System.out.println("How much would you like to charge for soda? (Input a numerical number taken to 2 decimal places)");
+        priceText = input.nextLine();
+        price = Double.parseDouble(priceText);
+        soda.setPrice(price);
+
+        System.out.println("We are deciding on the price for milk. Here is the description:");
+        milk.type();
+        System.out.println("How much would you like to charge for milk? (Input a numerical number taken to 2 decimal places)");
+        priceText = input.nextLine();
+        price = Double.parseDouble(priceText);
+        milk.setPrice(price);
+
+        drinkMenu.add(water);
+        drinkMenu.add(soda);
+        drinkMenu.add(milk);
     }
 }
 class Cupcake{
@@ -59,5 +90,30 @@ class RedVelvet extends Cupcake {
 class Chocolate extends Cupcake {
     public void type(){
         System.out.println("A chocolate based cupcake, with chocolate frosting.");
+    }
+}
+
+class Drink {
+    public double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public void type(){
+        System.out.println("I am a drink of your choice");
+    }
+}
+class Soda extends Drink {
+    public void type(){
+        System.out.println("A bottle of soda");
+    }
+}
+class Milk extends Drink{
+    public void type(){
+        System.out.println("A bottle of milk");
     }
 }
