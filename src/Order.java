@@ -55,13 +55,13 @@ public class Order {
                 order.add(cupcakeMenu.get(2));
                 System.out.println("Item added to order");
             }else if(orderChoice==4){
-                order.add(cupcakeMenu.get(3));
+                order.add(drinkMenu.get(0));
                 System.out.println("Item added to order");
             }else if(orderChoice==5){
-                order.add(cupcakeMenu.get(4));
+                order.add(drinkMenu.get(1));
                 System.out.println("Item added to order");
             }else if(orderChoice==6){
-                order.add(cupcakeMenu.get(5));
+                order.add(drinkMenu.get(2));
                 System.out.println("Item added to order");
             }
             else{
