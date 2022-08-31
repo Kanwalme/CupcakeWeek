@@ -83,7 +83,7 @@ public class Order {
 
         double subtotal=0;
         for (int i = 2; i < order.size(); i++) {
-            if(order.get(i).equals(cupcakeMenu.get(i))){
+            if(order.get(i).equals(cupcakeMenu.get(0))){
                 cupcakeMenu.get(0).type();
                 System.out.println(cupcakeMenu.get(0).getPrice());
                 subtotal = subtotal + cupcakeMenu.get(0).getPrice();
